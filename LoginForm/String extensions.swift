@@ -10,10 +10,11 @@ import Foundation
 
 extension String {
     public func isValidEmail() -> Bool {
-        let emailFormat = "^[a-zA-Z0-9._-]+@[a-zA-Z0-9]+([.-]?[a-zA-Z0-9]+)?([\\.]{1}[a-zA-Z]{2,4}){1,4}$"
-        let emailPredicate = NSPredicate(format: "SELF MATCHES %@" ,emailFormat)
+        let emailRegex = "^[a-zA-Z0-9._-]+@[a-zA-Z0-9]+([.-]?[a-zA-Z0-9]+)?([\\.]{1}[a-zA-Z]{2,4}){1,4}$"
+        let emailPredicate = NSPredicate(format: "SELF MATCHES %@" ,emailRegex)
         return emailPredicate.evaluate(with:self)
     }
+    
     public func isValidPassword() -> Bool {
         let passwordRegex = "^(?=.*[A-Z])(?=.*[0-9].*[0-9]).{8,}$"
         return NSPredicate(format: "SELF MATCHES %@", passwordRegex).evaluate(with: self)

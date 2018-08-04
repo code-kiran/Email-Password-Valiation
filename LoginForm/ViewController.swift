@@ -22,20 +22,15 @@ class ViewController: UIViewController {
     
     override func viewDidLoad() {
         super.viewDidLoad()
-        // Do any additional setup after loading the view, typically from a nib.
-    }
-    
-    override func didReceiveMemoryWarning() {
-        super.didReceiveMemoryWarning()
-        // Dispose of any resources that can be recreated.
     }
     
     @IBAction func loginButtonPressed(_ sender: Any) {
         
         do {
             try login()
+            Alert.showBasic(title: "Done", message: "Login Successful", vc: self)
             print("Login successful")
-     }
+        }
         catch loginError.incompleteForm{
             Alert.showBasic(title: "Empty Field", message: "Please fill the both filed in the form", vc: self)
             
@@ -44,7 +39,7 @@ class ViewController: UIViewController {
             Alert.showBasic(title: "Invalid Email", message: "Please write valid email", vc: self)
         }
         catch loginError.incorrectPassword{
-            Alert.showBasic(title: "Invalid Password", message: "Password must contain atleast 1 capital letter , 2 numbers and 8 or more than 8 letters long ", vc: self)
+            Alert.showBasic(title: "Invalid Password", message: "Password must contain 8 or more characters with at least 1 Uppercase Alphabet and 2 integers", vc: self)
         }
         catch {
             Alert.showBasic(title: "unvable to login", message: "please fill the form carefully ", vc: self)
@@ -52,19 +47,19 @@ class ViewController: UIViewController {
     }
     
     //function takes the data from form  and validates the value
-func login() throws {
-    let email = emailField.text!
-    let password = passwordField.text!
-    if email.isEmpty || password.isEmpty {
-        throw loginError.incompleteForm
-    }
-    if !email.isValidEmail() {
-        throw loginError.invalidEmail
-    }
-    if !password.isValidPassword() {
-        throw loginError.incorrectPassword
+    func login() throws {
+        let email = emailField.text!
+        let password = passwordField.text!
+        if email.isEmpty || password.isEmpty {
+            throw loginError.incompleteForm
+        }
+        if !email.isValidEmail() {
+            throw loginError.invalidEmail
+        }
+        if !password.isValidPassword() {
+            throw loginError.incorrectPassword
+        }
+        
     }
     
-}
-
 }
