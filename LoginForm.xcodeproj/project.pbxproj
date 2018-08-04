@@ -12,6 +12,8 @@
 		9FEE10142053B5CE00FA610E /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 9FEE10122053B5CE00FA610E /* Main.storyboard */; };
 		9FEE10162053B5CE00FA610E /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 9FEE10152053B5CE00FA610E /* Assets.xcassets */; };
 		9FEE10192053B5CE00FA610E /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 9FEE10172053B5CE00FA610E /* LaunchScreen.storyboard */; };
+		9FEE10232053BB2000FA610E /* String extensions.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9FEE10222053BB2000FA610E /* String extensions.swift */; };
+		9FEE10252053BD2C00FA610E /* Alert.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9FEE10242053BD2C00FA610E /* Alert.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -22,6 +24,8 @@
 		9FEE10152053B5CE00FA610E /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		9FEE10182053B5CE00FA610E /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
 		9FEE101A2053B5CE00FA610E /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		9FEE10222053BB2000FA610E /* String extensions.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "String extensions.swift"; sourceTree = "<group>"; };
+		9FEE10242053BD2C00FA610E /* Alert.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Alert.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -55,6 +59,8 @@
 			isa = PBXGroup;
 			children = (
 				9FEE100E2053B5CE00FA610E /* AppDelegate.swift */,
+				9FEE10222053BB2000FA610E /* String extensions.swift */,
+				9FEE10242053BD2C00FA610E /* Alert.swift */,
 				9FEE10102053B5CE00FA610E /* ViewController.swift */,
 				9FEE10122053B5CE00FA610E /* Main.storyboard */,
 				9FEE10152053B5CE00FA610E /* Assets.xcassets */,
@@ -91,11 +97,12 @@
 			isa = PBXProject;
 			attributes = {
 				LastSwiftUpdateCheck = 0920;
-				LastUpgradeCheck = 0920;
+				LastUpgradeCheck = 1000;
 				ORGANIZATIONNAME = kiran;
 				TargetAttributes = {
 					9FEE100A2053B5CE00FA610E = {
 						CreatedOnToolsVersion = 9.2;
+						LastSwiftMigration = 1000;
 						ProvisioningStyle = Automatic;
 					};
 				};
@@ -138,6 +145,8 @@
 			files = (
 				9FEE10112053B5CE00FA610E /* ViewController.swift in Sources */,
 				9FEE100F2053B5CE00FA610E /* AppDelegate.swift in Sources */,
+				9FEE10252053BD2C00FA610E /* Alert.swift in Sources */,
+				9FEE10232053BB2000FA610E /* String extensions.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -177,6 +186,7 @@
 				CLANG_WARN_BOOL_CONVERSION = YES;
 				CLANG_WARN_COMMA = YES;
 				CLANG_WARN_CONSTANT_CONVERSION = YES;
+				CLANG_WARN_DEPRECATED_OBJC_IMPLEMENTATIONS = YES;
 				CLANG_WARN_DIRECT_OBJC_ISA_USAGE = YES_ERROR;
 				CLANG_WARN_DOCUMENTATION_COMMENTS = YES;
 				CLANG_WARN_EMPTY_BODY = YES;
@@ -184,6 +194,7 @@
 				CLANG_WARN_INFINITE_RECURSION = YES;
 				CLANG_WARN_INT_CONVERSION = YES;
 				CLANG_WARN_NON_LITERAL_NULL_CONVERSION = YES;
+				CLANG_WARN_OBJC_IMPLICIT_RETAIN_SELF = YES;
 				CLANG_WARN_OBJC_LITERAL_CONVERSION = YES;
 				CLANG_WARN_OBJC_ROOT_CLASS = YES_ERROR;
 				CLANG_WARN_RANGE_LOOP_ANALYSIS = YES;
@@ -234,6 +245,7 @@
 				CLANG_WARN_BOOL_CONVERSION = YES;
 				CLANG_WARN_COMMA = YES;
 				CLANG_WARN_CONSTANT_CONVERSION = YES;
+				CLANG_WARN_DEPRECATED_OBJC_IMPLEMENTATIONS = YES;
 				CLANG_WARN_DIRECT_OBJC_ISA_USAGE = YES_ERROR;
 				CLANG_WARN_DOCUMENTATION_COMMENTS = YES;
 				CLANG_WARN_EMPTY_BODY = YES;
@@ -241,6 +253,7 @@
 				CLANG_WARN_INFINITE_RECURSION = YES;
 				CLANG_WARN_INT_CONVERSION = YES;
 				CLANG_WARN_NON_LITERAL_NULL_CONVERSION = YES;
+				CLANG_WARN_OBJC_IMPLICIT_RETAIN_SELF = YES;
 				CLANG_WARN_OBJC_LITERAL_CONVERSION = YES;
 				CLANG_WARN_OBJC_ROOT_CLASS = YES_ERROR;
 				CLANG_WARN_RANGE_LOOP_ANALYSIS = YES;
@@ -275,11 +288,12 @@
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				CODE_SIGN_STYLE = Automatic;
+				DEVELOPMENT_TEAM = N373WCYYY4;
 				INFOPLIST_FILE = LoginForm/Info.plist;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
 				PRODUCT_BUNDLE_IDENTIFIER = com.kiranrana.LoginForm;
 				PRODUCT_NAME = "$(TARGET_NAME)";
-				SWIFT_VERSION = 4.0;
+				SWIFT_VERSION = 4.2;
 				TARGETED_DEVICE_FAMILY = "1,2";
 			};
 			name = Debug;
@@ -289,11 +303,12 @@
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				CODE_SIGN_STYLE = Automatic;
+				DEVELOPMENT_TEAM = N373WCYYY4;
 				INFOPLIST_FILE = LoginForm/Info.plist;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
 				PRODUCT_BUNDLE_IDENTIFIER = com.kiranrana.LoginForm;
 				PRODUCT_NAME = "$(TARGET_NAME)";
-				SWIFT_VERSION = 4.0;
+				SWIFT_VERSION = 4.2;
 				TARGETED_DEVICE_FAMILY = "1,2";
 			};
 			name = Release;
